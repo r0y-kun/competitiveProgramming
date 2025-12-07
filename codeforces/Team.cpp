@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+  int n;
+  cin >> n;
+
+  int ot=0;
+
+  for (int i = 0; i < n; i++) {
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    int r=a+b+c;
+
+    if (r>1){
+      ot += 1;
+    }
+  }
+  cout << ot;
+}
