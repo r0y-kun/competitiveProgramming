@@ -9,12 +9,19 @@ int main() {
 
   while (t--) {
     int n; cin >> n;
+
+    bool big=false;
     vector<int> v(n);
-    for (int i = 0; i < n; i++) {
-      cin >> v[i];
+    for (auto &x : v) {
+      cin >> x;
     }
-    if (v[0]>v[1]) cout << "YES\n";
-    else cout << "NO\n";
+
+    auto minInt = min_element(v.begin(), v.end());
+
+    if (*minInt == v[0]) big=true;
+
+    if (big==true) cout << "Yes\n";
+    else cout << "No\n";
   }
   return 0;
 }
